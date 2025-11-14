@@ -1,7 +1,13 @@
 package EtablissementScolaire;
 
-import java.util.Date;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
 
+import java.util.Date;
+@Setter
+@Getter
+@ToString
 public class etudiant extends User{
     private String Groupe ;
     private String tuteur;
@@ -10,5 +16,6 @@ public class etudiant extends User{
         this.tuteur = tuteur;
         this.Groupe = groupe;
     }
+
 }
 
