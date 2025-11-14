@@ -13,7 +13,7 @@ public class cour {
     private String label;
     private int credits;
     private String enseignant;
-    private List<Examen> examens;
+
 
 
 

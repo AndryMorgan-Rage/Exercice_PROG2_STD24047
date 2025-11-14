@@ -1,7 +1,11 @@
 package EtablissementScolaire;
 
-import java.time.LocalDateTime;
+import lombok.Getter;
+import lombok.Setter;
 
+import java.time.LocalDateTime;
+@Setter
+@Getter
 public class historiquesDesNotes {
     private double ancienNote;
     private double newNote;
@@ -13,29 +17,7 @@ public class historiquesDesNotes {
         this.ancienNote = ancienNote;
     }
 
-    public double getAncienNote() {
-        return ancienNote;
-    }
 
-    public void setAncienNote(int ancienNote) {
-        this.ancienNote = ancienNote;
-    }
-
-    public double  getNewNote() {
-        return newNote;
-    }
-
-    public void setNewNote(int newNote) {
-        this.newNote = newNote;
-    }
-
-    public LocalDateTime getDateAndTime() {
-        return dateAndTime;
-    }
-
-    public void setDateAndTime(LocalDateTime dateAndTime) {
-        this.dateAndTime = dateAndTime;
-    }
 
     @Override
     public String toString() {

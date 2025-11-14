@@ -11,23 +11,36 @@ import java.util.List;
 public class Examen {
     private int id;
     private String titre;
-    private List<cour> MatiereRattacher;
+    private cour courRattacher;
     private String DateAndHours ;
     private int coefficience;
-    private historiquesDesNotes historiquesDesNotes;
+    private List<historiquesDesNotes> historiquesDesNotes;
 
-    public Examen(int id, String titre, List<cour> MatiereRattacher, String dateAndHours, int coefficience) {
+
+    public Examen(int id, String titre,  cour courRattacher , String dateAndHours, int coefficience) {
         this.id = id;
         this.titre = titre;
-        this.MatiereRattacher = new ArrayList<>();
+        this.courRattacher = courRattacher;
         DateAndHours = dateAndHours;
         this.coefficience = coefficience;
+
+    }
+
+
+    public double calculeNote(List<Examen> examen) {
+
+     {
+        if (historiquesDesNotes == null ) {
+            return 0.00;
+        }
+        double calculDenoteEtcoefficien = historiquesDesNotes.stream()
+                .mapToDouble(historiquesDesNotes -> historiquesDesNotes.getNewNote()*coefficience)
+                .sum();
+        }
+        double sumCoefficience = examen.stream().mapToDouble(Examen::getCoefficience).sum();
+    return 0;
     }
 
 
 
-@Override
-    public String toString() {
-        return "l'examen avec l'id : " + id + " "+titre +" "+ MatiereRattacher.stream().map(cour::getLabel) + DateAndHours + (historiquesDesNotes.getAncienNote()*coefficience+historiquesDesNotes.getNewNote()*coefficience)/coefficience+coefficience ;
-}
 }
