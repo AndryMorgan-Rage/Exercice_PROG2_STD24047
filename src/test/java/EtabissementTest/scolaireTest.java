@@ -2,6 +2,7 @@ package EtabissementTest;
 
 import EtablissementScolaire.Examen;
 import EtablissementScolaire.Promotion;
+import EtablissementScolaire.Service;
 import EtablissementScolaire.cour;
 import EtablissementScolaire.etudiant;
 import EtablissementScolaire.notes;
@@ -21,6 +22,8 @@ public class scolaireTest {
         morganNote.setEtudiant(morgan);
         morganNote.changerLaValeur(15.00);
         morganNote.seeTheHistoriquesDesNotes();
+
+
 
        List<etudiant> etudiants = List.of(
                new etudiant(
@@ -139,6 +142,7 @@ public class scolaireTest {
         Promotion mapromotion = new Promotion((List<etudiant>) etudiants);
 
         mapromotion.affichergroupe();
+
 
 
     }
