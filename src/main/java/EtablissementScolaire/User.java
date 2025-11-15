@@ -3,12 +3,12 @@ package EtablissementScolaire;
 import java.util.Date;
 
 public class User {
-    private final String id;
-    private final String nom;
-    private final String prenom;
-    private final String dateDeNaissance;
-    private final String email;
-    private final String numeroDetelephone ;
+    protected   String id;
+    protected String nom;
+    protected   String prenom;
+    protected   String dateDeNaissance;
+    protected   String email;
+    protected String numeroDetelephone ;
 
     public User(String id, String nom, String prenom, String dateDeNaissance, String email, String numeroDetelephone) {
         this.id = id;
@@ -18,4 +18,5 @@ public class User {
         this.email = email;
         this.numeroDetelephone = numeroDetelephone;
     }
+
 }

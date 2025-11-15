@@ -16,6 +16,9 @@ public class etudiant extends User{
         this.tuteur = tuteur;
         this.Groupe = groupe;
     }
+    public String getnom() {
+        return nom;
+    }
 
 }
 
